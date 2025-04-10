@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Épreuves - HATIMI Bilal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .project {
+      margin-bottom: 40px;
+    }
+
+    .project h3 {
+      color: #0077cc;
+    }
+
+    .project ul {
+      margin-left: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #0077cc;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HATIMI Bilal</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="profil.html">Profil</a>
+      <a href="entreprise.html">Entreprise</a>
+      <a href="epreuves.html">Épreuves</a>
+      <a href="#">Veille</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Mes Épreuves et Projets - BTS SIO SISR</h2>
+
+    <div class="project">
+      <h3><span class="badge">E4</span> Création d’un VPN entre deux sites</h3>
+      <p><strong>Description :</strong> Mise en place d’un VPN sécurisé entre Marrakech et Montpellier pour connecter les deux agences de l’entreprise Adertechnologies.</p>
+      <p><strong>Compétences :</strong></p>
+      <ul>
+        <li>Installation et configuration d’un serveur OpenVPN</li>
+        <li>Création et gestion des certificats avec Easy-RSA</li>
+        <li>Routage et accès sécurisé entre les réseaux</li>
+      </ul>
+      <p><strong>Outils utilisés :</strong> Ubuntu Server, Easy-RSA, OpenVPN, pfSense</p>
+    </div>
+
+    <div class="project">
+      <h3><span class="badge">E5</span> Installation d’un serveur Active Directory</h3>
+      <p><strong>Description :</strong> Déploiement d’un serveur Windows avec gestion des utilisateurs, des groupes et des droits d’accès via Active Directory.</p>
+      <p><strong>Compétences :</strong></p>
+      <ul>
+        <li>Installation de Windows Server</li>
+        <li>Création de l'annuaire AD</li>
+        <li>Configuration des GPO (stratégies de groupe)</li>
+        <li>Attribution de droits utilisateurs</li>
+      </ul>
+      <p><strong>Outils utilisés :</strong> Windows Server 2016, Active Directory, GPO</p>
+    </div>
+
+    <div class="project">
+      <h3><span class="badge">E5</span> Maintenance du réseau local</h3>
+      <p><strong>Description :</strong> Réorganisation du câblage réseau, installation de switchs et configuration des adresses IP fixes pour les postes clients.</p>
+      <p><strong>Compétences :</strong></p>
+      <ul>
+        <li>Pose de goulottes murales et câblage RJ45</li>
+        <li>Configuration réseau (IP statique, DNS, passerelle)</li>
+        <li>Tests de connectivité et dépannage</li>
+      </ul>
+      <p><strong>Outils utilisés :</strong> Matériel réseau, Windows 10/11, câble RJ45, testeurs</p>
+    </div>
+  </div>
+
+</body>
+</html>
