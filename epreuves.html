@@ -5,48 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Épreuves - HATIMI Bilal</title>
   <style>
-    body {
+    :root {
+      --main-color: #00bcd4;
+      --bg-dark: #0a0f24;
+      --bg-light: #121a2e;
+      --text-light: #f0f0f0;
+      --accent: #00ffe5;
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #0a0f24, #121a2e);
+      color: var(--text-light);
+      min-height: 100vh;
     }
 
     header {
-      background-color: #111;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+      background-color: var(--bg-dark);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.05);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      height: 60px;
+      width: auto;
+    }
+
+    .logo-container h1 {
+      font-size: 2em;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
     }
 
     nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin-top: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
+      position: relative;
       transition: color 0.3s;
     }
 
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease-in-out;
+    }
+
     nav a:hover {
-      color: #00aaff;
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .container {
       max-width: 1000px;
       margin: 50px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,255,255,0.05);
     }
 
     h2 {
       text-align: center;
       margin-bottom: 30px;
+      color: var(--accent);
     }
 
     .project {
@@ -54,17 +108,24 @@
     }
 
     .project h3 {
-      color: #0077cc;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .project p, .project ul li {
+      color: #ccc;
+      line-height: 1.6;
     }
 
     .project ul {
       margin-left: 20px;
+      margin-top: 10px;
     }
 
     .badge {
       display: inline-block;
-      background-color: #0077cc;
-      color: white;
+      background-color: var(--accent);
+      color: #0a0f24;
       padding: 4px 8px;
       border-radius: 5px;
       font-size: 0.9em;
@@ -72,13 +133,22 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .container {
         margin: 20px;
+      }
+
+      .logo-container {
+        justify-content: center;
       }
     }
   </style>
@@ -86,14 +156,17 @@
 <body>
 
   <header>
-    <h1>HATIMI Bilal</h1>
+    <div class="logo-container">
+      <img src="Logo Ader.png" alt="Logo Adertechnologies" />
+      <h1>HATIMI Bilal</h1>
+    </div>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="profil.html">Profil</a>
       <a href="entreprise.html">Entreprise</a>
       <a href="epreuves.html">Épreuves</a>
-      <a href="#">Veille</a>
-      <a href="#">Contact</a>
+      <a href="veille.html">Veille</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -128,15 +201,4 @@
     <div class="project">
       <h3><span class="badge">E5</span> Maintenance du réseau local</h3>
       <p><strong>Description :</strong> Réorganisation du câblage réseau, installation de switchs et configuration des adresses IP fixes pour les postes clients.</p>
-      <p><strong>Compétences :</strong></p>
-      <ul>
-        <li>Pose de goulottes murales et câblage RJ45</li>
-        <li>Configuration réseau (IP statique, DNS, passerelle)</li>
-        <li>Tests de connectivité et dépannage</li>
-      </ul>
-      <p><strong>Outils utilisés :</strong> Matériel réseau, Windows 10/11, câble RJ45, testeurs</p>
-    </div>
-  </div>
-
-</body>
-</html>
+      <p><strong>Compétences :</strong></p
