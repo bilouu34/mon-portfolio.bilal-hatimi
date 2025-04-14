@@ -5,59 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Entreprise - HATIMI Bilal</title>
   <style>
-    body {
+    :root {
+      --main-color: #00bcd4;
+      --bg-dark: #0a0f24;
+      --bg-light: #121a2e;
+      --text-light: #f0f0f0;
+      --accent: #00ffe5;
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #0a0f24, #121a2e);
+      color: var(--text-light);
+      min-height: 100vh;
     }
 
     header {
-      background-color: #111;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+      background-color: var(--bg-dark);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.05);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      height: 60px;
+      width: auto;
+    }
+
+    .logo-container h1 {
+      font-size: 2em;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
     }
 
     nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin-top: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
+      position: relative;
       transition: color 0.3s;
     }
 
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease-in-out;
+    }
+
     nav a:hover {
-      color: #00aaff;
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 50px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-width: 150px;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,255,255,0.05);
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      color: var(--accent);
     }
 
-    p {
+    p, li {
       line-height: 1.6;
-      margin-bottom: 15px;
+      color: #ccc;
+      margin-bottom: 10px;
     }
 
     ul {
@@ -65,7 +114,7 @@
     }
 
     a.link {
-      color: #0077cc;
+      color: var(--accent);
       text-decoration: none;
     }
 
@@ -74,13 +123,22 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .container {
         margin: 20px;
+      }
+
+      .logo-container {
+        justify-content: center;
       }
     }
   </style>
@@ -88,58 +146,51 @@
 <body>
 
   <header>
-    <h1>HATIMI Bilal</h1>
+    <div class="logo-container">
+      <img src="Logo Ader.png" alt="Logo Adertechnologies" />
+      <h1>HATIMI Bilal</h1>
+    </div>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="profil.html">Profil</a>
       <a href="entreprise.html">Entreprise</a>
-      <a href="#">Épreuves</a>
-      <a href="#">Veille</a>
-      <a href="#">Contact</a>
+      <a href="epreuves.html">Épreuves</a>
+      <a href="veille.html">Veille</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="container">
-    <img src="Logo Ader.png" alt="Logo Adertechnologies" class="logo" />
     <h2>Mon entreprise d'accueil</h2>
     <p><strong>Nom de l'entreprise :</strong> Adertechnologies</p>
     <p><strong>Secteur d’activité :</strong> Télécommunications et solutions informatiques</p>
     <p><strong>Présentation :</strong><br>
-      ADER TECHNOLOGIES est une entreprise spécialisée dans le domaine des télécommunications mobiles, offrant une gamme complète de services pour répondre aux besoins de ses clients. Basée à Lézigneux, elle se distingue par son expertise et son engagement envers l'innovation et la qualité.​
-Dataprospects
-+2
-Le Figaro Entreprises
-+2
-Pappers
-+2
-
-Nos principaux services incluent :
-
-Ingénierie de sites existants et neufs : Nous réalisons des études approfondies, élaborons des Avant-Projets Détaillés (APD) et Avant-Projets Sommaires (APS), assurons le pilotage des activités, et produisons les dossiers nécessaires, y compris les plans et les notes de calcul des structures.
-
-Consulting en supervision : Nous offrons un soutien technique complet, englobant la gestion des incidents, le diagnostic, la création de tickets et la coordination des interventions, garantissant ainsi une supervision efficace des infrastructures.
-
-Consulting en maintenance radio : Nos interventions de maintenance préventive et curative portent sur divers équipements radio, tels que les pylônes, les toits-terrasses et les installations GSM-rail, assurant leur performance et leur fiabilité continues.
-
-Notre équipe, composée de techniciens et d'ingénieurs spécialisés, s'engage à fournir des solutions innovantes et durables, contribuant ainsi à la performance et à la satisfaction de nos clients. Nous nous appuyons sur des valeurs fondamentales telles que la disponibilité, la réactivité, la réussite et la satisfaction client pour mener à bien chaque projet.
+      Adertechnologies est une entreprise spécialisée dans les télécommunications mobiles, proposant une large gamme de services techniques. Elle se distingue par son expertise, son innovation et sa réactivité.
     </p>
-    <p><strong>Site web :</strong>
-      <a href="https://www.adertechnologies.fr/" target="_blank" class="link">www.adertechnologies.fr</a>
-    </p>
-    <p><strong>Mon rôle au sein de l'entreprise :</strong></p>
+
+    <p><strong>Nos principaux services incluent :</strong></p>
     <ul>
-      <li>Participation à la mise en place d’un VPN entre deux sites (Marrakech & Montpellier)</li>
-      <li>Installation et configuration de serveurs (Windows Server)</li>
-      <li>Création d’utilisateurs et gestion des accès</li>
-      <li>Interv</li>
+      <li><strong>Ingénierie de sites :</strong> Études, APD/APS, pilotage, dossiers techniques.</li>
+      <li><strong>Consulting en supervision :</strong> Gestion des incidents, diagnostics, tickets, coordination.</li>
+      <li><strong>Maintenance radio :</strong> Préventive & curative sur pylônes, installations GSM, etc.</li>
     </ul>
-    <p><strong>Outils & technologies utilisés :</strong></p>
+
+    <p><strong>Mon rôle dans l'entreprise :</strong></p>
     <ul>
-      <li>Windows Server 2016 / 2012</li>
-      <li>Active Directory</li>
-      <li>Easy-RSA / OpenVPN</li>
-      <li>Switchs, routeurs, câblage réseau</li>
+      <li>Participation à la mise en place d’un VPN (Marrakech ↔ Montpellier)</li>
+      <li>Installation/configuration de serveurs (Windows Server)</li>
+      <li>Création d’utilisateurs & gestion des accès</li>
     </ul>
+
+    <p><strong>Outils & technologies :</strong></p>
+    <ul>
+      <li>Windows Server 2012/2016</li>
+      <li>Active Directory, GPO</li>
+      <li>OpenVPN, Easy-RSA</li>
+      <li>Matériel réseau : switchs, routeurs, câblage</li>
+    </ul>
+
+    <p><strong>Site Web :</strong> <a href="https://www.adertechnologies.fr" class="link" target="_blank">adertechnologies.fr</a></p>
   </div>
 
 </body>
