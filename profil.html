@@ -5,17 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profil - HATIMI Bilal</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; color: #333; }
-    header { background-color: #111; color: white; padding: 20px 0; text-align: center; }
-    nav { margin-top: 10px; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s; }
-    nav a:hover { color: #00aaff; }
-    .container { max-width: 900px; margin: 50px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .profile-photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
-    .profile-info { text-align: center; }
-    h2 { text-align: center; margin-bottom: 10px; }
-    p { line-height: 1.6; }
-    @media (max-width: 600px) { nav a { display: block; margin: 10px 0; } .container { margin: 20px; } }
+    :root {
+      --main-color: #00bcd4;
+      --bg-dark: #0a0f24;
+      --bg-light: #121a2e;
+      --text-light: #f0f0f0;
+      --accent: #00ffe5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #0a0f24, #121a2e);
+      color: var(--text-light);
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--bg-dark);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.05);
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,255,255,0.05);
+    }
+
+    .profile-info {
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid var(--accent);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    p {
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        margin: 20px;
+      }
+    }
   </style>
 </head>
 <body>
