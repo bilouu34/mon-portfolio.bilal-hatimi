@@ -1,0 +1,79 @@
+/* Style général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background: #1e1e1e;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Section principale */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+}
+
+/* Projets */
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    margin: 0;
+    color: #444;
+}
+
+.project p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        margin: 20px;
+        padding: 15px;
+    }
+}
