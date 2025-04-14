@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Épreuves - HATIMI Bilal</title>
+  <title>Veille Technologique - HATIMI Bilal</title>
   <style>
     :root {
       --main-color: #00bcd4;
@@ -103,33 +103,31 @@
       color: var(--accent);
     }
 
-    .project {
+    .section {
       margin-bottom: 40px;
     }
 
-    .project h3 {
+    .section h3 {
       color: var(--accent);
       margin-bottom: 10px;
     }
 
-    .project p, .project ul li {
+    p, li {
       color: #ccc;
       line-height: 1.6;
     }
 
-    .project ul {
+    ul {
       margin-left: 20px;
-      margin-top: 10px;
     }
 
-    .badge {
-      display: inline-block;
-      background-color: var(--accent);
-      color: #0a0f24;
-      padding: 4px 8px;
-      border-radius: 5px;
-      font-size: 0.9em;
-      margin-right: 10px;
+    a.link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -171,34 +169,46 @@
   </header>
 
   <div class="container">
-    <h2>Mes Épreuves et Projets - BTS SIO SISR</h2>
+    <h2>Veille Technologique – Spécial Télécommunications 2025</h2>
 
-    <div class="project">
-      <h3><span class="badge">E4</span> Création d’un VPN entre deux sites</h3>
-      <p><strong>Description :</strong> Mise en place d’un VPN sécurisé entre Marrakech et Montpellier pour connecter les deux agences de l’entreprise Adertechnologies.</p>
-      <p><strong>Compétences :</strong></p>
-      <ul>
-        <li>Installation et configuration d’un serveur OpenVPN</li>
-        <li>Création et gestion des certificats avec Easy-RSA</li>
-        <li>Routage et accès sécurisé entre les réseaux</li>
-      </ul>
-      <p><strong>Outils utilisés :</strong> Ubuntu Server, Easy-RSA, OpenVPN, pfSense</p>
+    <div class="section">
+      <h3>🎯 Objectif</h3>
+      <p>
+        Rester à jour sur les dernières innovations en télécoms et réseaux pour anticiper les besoins d’Adertechnologies et proposer des solutions efficaces.
+      </p>
     </div>
 
-    <div class="project">
-      <h3><span class="badge">E5</span> Installation d’un serveur Active Directory</h3>
-      <p><strong>Description :</strong> Déploiement d’un serveur Windows avec gestion des utilisateurs, des groupes et des droits d’accès via Active Directory.</p>
-      <p><strong>Compétences :</strong></p>
+    <div class="section">
+      <h3>📡 Thématiques Suivies</h3>
       <ul>
-        <li>Installation de Windows Server</li>
-        <li>Création de l'annuaire AD</li>
-        <li>Configuration des GPO (stratégies de groupe)</li>
-        <li>Attribution de droits utilisateurs</li>
+        <li>📶 <strong>5G/6G</strong> : déploiement avancé, latence réduite, cas d’usage pro</li>
+        <li>🛰️ <strong>Internet par satellite</strong> : Starlink, Amazon Kuiper</li>
+        <li>🤖 <strong>IA & Réseaux</strong> : optimisation dynamique de trafic, prédiction de panne</li>
+        <li>🔐 <strong>Cybersécurité des infrastructures</strong> : firewall IA, SD-WAN Zero Trust</li>
+        <li>🌍 <strong>Edge computing</strong> : traitement local ultra rapide dans les équipements réseau</li>
       </ul>
-      <p><strong>Outils utilisés :</strong> Windows Server 2016, Active Directory, GPO</p>
     </div>
 
-    <div class="project">
-      <h3><span class="badge">E5</span> Maintenance du réseau local</h3>
-      <p><strong>Description :</strong> Réorganisation du câblage réseau, installation de switchs et configuration des adresses IP fixes pour les postes clients.</p>
-      <p><strong>Compétences :</strong></p
+    <div class="section">
+      <h3>🧰 Outils utilisés pour la veille</h3>
+      <ul>
+        <li><a class="link" href="https://feedly.com/" target="_blank">Feedly</a> pour suivre les flux RSS spécialisés (Telecoms.com, ZDNet, Orange Innovation…)</li>
+        <li><a class="link" href="https://www.google.fr/alerts" target="_blank">Google Alerts</a> sur mots-clés : "télécom 2025", "réseau mobile", "5G entreprise", etc.</li>
+        <li>Réseaux pro : LinkedIn, X (Twitter) – hashtags #5G, #cybersecurity, #telecom</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📰 Exemples d’articles suivis</h3>
+      <p><strong>Titre :</strong> "6G : déjà des tests concrets dans les laboratoires européens"</p>
+      <p><strong>Source :</strong> ZDNet, janvier 2025</p>
+      <p><strong>Résumé :</strong> La 6G promet un débit 10x supérieur à la 5G et des cas d’usage comme la téléchirurgie ou les jumeaux numériques pour la maintenance réseau.</p>
+
+      <p><strong>Titre :</strong> "Starlink Business : Internet satellite à haut débit pour zones isolées"</p>
+      <p><strong>Source :</strong> 01Net, mars 2025</p>
+      <p><strong>Résumé :</strong> Starlink propose désormais des offres professionnelles pour les PME, avec une couverture nationale, une latence <50ms et une installation rapide.</p>
+    </div>
+  </div>
+
+</body>
+</html>
