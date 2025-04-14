@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - HATIMI Bilal</title>
+  <title>Veille Technologique - HATIMI Bilal</title>
   <style>
     :root {
       --main-color: #00bcd4;
@@ -89,7 +89,7 @@
     }
 
     .container {
-      max-width: 700px;
+      max-width: 1000px;
       margin: 50px auto;
       padding: 30px;
       background-color: rgba(255, 255, 255, 0.05);
@@ -103,63 +103,31 @@
       color: var(--accent);
     }
 
-    .contact-box {
-      background-color: #1b253f;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+    .section {
+      margin-bottom: 40px;
     }
 
-    .contact-box p {
-      font-size: 1.1em;
-      color: #ccc;
+    .section h3 {
+      color: var(--accent);
       margin-bottom: 10px;
     }
 
-    .contact-box strong {
-      color: var(--accent);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
+    p, li {
       color: #ccc;
+      line-height: 1.6;
     }
 
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      background-color: #1f2a47;
-      color: #fff;
-      font-size: 1em;
+    ul {
+      margin-left: 20px;
     }
 
-    input::placeholder, textarea::placeholder {
-      color: #aaa;
+    a.link {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    button {
-      padding: 12px;
-      background-color: var(--accent);
-      color: #0a0f24;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #00e6d2;
+    a.link:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -201,29 +169,45 @@
   </header>
 
   <div class="container">
-    <h2>Me Contacter</h2>
+    <h2>Veille Technologique – Spécial Télécommunications 2025</h2>
 
-    <div class="contact-box">
-      <p>📧 <strong>Email :</strong> bilal.hatimi2003@gmail.com</p>
-      <p>📱 <strong>Téléphone :</strong> 06 18 12 24 26</p>
-      <p>🗨️ N'hésitez pas à me contacter pour toute question ou projet professionnel !</p>
+    <div class="section">
+      <h3>🎯 Objectif</h3>
+      <p>
+        Rester à jour sur les dernières innovations en télécoms et réseaux pour anticiper les besoins d’Adertechnologies et proposer des solutions efficaces.
+      </p>
     </div>
 
-    <form action="#" method="post">
-      <div>
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
-      </div>
-      <div>
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" required />
-      </div>
-      <div>
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
-      </div>
-      <button type="submit">Envoyer</button>
-    </form>
+    <div class="section">
+      <h3>📡 Thématiques Suivies</h3>
+      <ul>
+        <li>📶 <strong>5G/6G</strong> : déploiement avancé, latence réduite, cas d’usage pro</li>
+        <li>🛰️ <strong>Internet par satellite</strong> : Starlink, Amazon Kuiper</li>
+        <li>🤖 <strong>IA & Réseaux</strong> : optimisation dynamique de trafic, prédiction de panne</li>
+        <li>🔐 <strong>Cybersécurité des infrastructures</strong> : firewall IA, SD-WAN Zero Trust</li>
+        <li>🌍 <strong>Edge computing</strong> : traitement local ultra rapide dans les équipements réseau</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🧰 Outils utilisés pour la veille</h3>
+      <ul>
+        <li><a class="link" href="https://feedly.com/" target="_blank">Feedly</a> pour suivre les flux RSS spécialisés (Telecoms.com, ZDNet, Orange Innovation…)</li>
+        <li><a class="link" href="https://www.google.fr/alerts" target="_blank">Google Alerts</a> sur mots-clés : "télécom 2025", "réseau mobile", "5G entreprise", etc.</li>
+        <li>Réseaux pro : LinkedIn, X (Twitter) – hashtags #5G, #cybersecurity, #telecom</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📰 Exemples d’articles suivis</h3>
+      <p><strong>Titre :</strong> "6G : déjà des tests concrets dans les laboratoires européens"</p>
+      <p><strong>Source :</strong> ZDNet, janvier 2025</p>
+      <p><strong>Résumé :</strong> La 6G promet un débit 10x supérieur à la 5G et des cas d’usage comme la téléchirurgie ou les jumeaux numériques pour la maintenance réseau.</p>
+
+      <p><strong>Titre :</strong> "Starlink Business : Internet satellite à haut débit pour zones isolées"</p>
+      <p><strong>Source :</strong> 01Net, mars 2025</p>
+      <p><strong>Résumé :</strong> Starlink propose désormais des offres professionnelles pour les PME, avec une couverture nationale, une latence &lt;50ms et une installation rapide.</p>
+    </div>
   </div>
 
 </body>
