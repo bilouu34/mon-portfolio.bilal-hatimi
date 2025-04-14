@@ -5,48 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veille Technologique - HATIMI Bilal</title>
   <style>
-    body {
+    :root {
+      --main-color: #00bcd4;
+      --bg-dark: #0a0f24;
+      --bg-light: #121a2e;
+      --text-light: #f0f0f0;
+      --accent: #00ffe5;
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #0a0f24, #121a2e);
+      color: var(--text-light);
+      min-height: 100vh;
     }
 
     header {
-      background-color: #111;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+      background-color: var(--bg-dark);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.05);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      height: 60px;
+      width: auto;
+    }
+
+    .logo-container h1 {
+      font-size: 2em;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
     }
 
     nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin-top: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
+      position: relative;
       transition: color 0.3s;
     }
 
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease-in-out;
+    }
+
     nav a:hover {
-      color: #00aaff;
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .container {
       max-width: 1000px;
       margin: 50px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0,255,255,0.05);
     }
 
     h2 {
       text-align: center;
       margin-bottom: 30px;
+      color: var(--accent);
     }
 
     .section {
@@ -54,7 +108,13 @@
     }
 
     .section h3 {
-      color: #0077cc;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      color: #ccc;
+      line-height: 1.6;
     }
 
     ul {
@@ -62,7 +122,7 @@
     }
 
     a.link {
-      color: #0077cc;
+      color: var(--accent);
       text-decoration: none;
     }
 
@@ -71,13 +131,22 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .container {
         margin: 20px;
+      }
+
+      .logo-container {
+        justify-content: center;
       }
     }
   </style>
@@ -85,52 +154,59 @@
 <body>
 
   <header>
-    <h1>HATIMI Bilal</h1>
+    <div class="logo-container">
+      <img src="Logo Ader.png" alt="Logo Adertechnologies" />
+      <h1>HATIMI Bilal</h1>
+    </div>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="profil.html">Profil</a>
       <a href="entreprise.html">Entreprise</a>
       <a href="epreuves.html">Épreuves</a>
       <a href="veille.html">Veille</a>
-      <a href="#">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="container">
-    <h2>Ma Veille Technologique</h2>
+    <h2>Veille Technologique – Spécial Télécommunications 2025</h2>
 
     <div class="section">
       <h3>🎯 Objectif</h3>
       <p>
-        La veille technologique me permet de rester informé des dernières tendances dans le domaine de l’informatique, notamment en matière de cybersécurité, de réseaux, de logiciels libres et de virtualisation.
+        Rester à jour sur les dernières innovations en télécoms et réseaux pour anticiper les besoins d’Adertechnologies et proposer des solutions efficaces.
       </p>
     </div>
 
     <div class="section">
-      <h3>🧰 Outils utilisés</h3>
+      <h3>📡 Thématiques Suivies</h3>
       <ul>
-        <li>Flux RSS via <a class="link" href="https://feedly.com/" target="_blank">Feedly</a></li>
-        <li>Alertes Google (<a class="link" href="https://www.google.fr/alerts" target="_blank">Google Alerts</a>)</li>
-        <li>Sites spécialisés : <a class="link" href="https://korben.info/" target="_blank">Korben</a>, <a class="link" href="https://www.zdnet.fr/" target="_blank">ZDNet</a>, <a class="link" href="https://www.01net.com/" target="_blank">01Net</a></li>
-        <li>Réseaux sociaux pro : LinkedIn, Twitter (X)</li>
+        <li>📶 <strong>5G/6G</strong> : déploiement avancé, latence réduite, cas d’usage pro</li>
+        <li>🛰️ <strong>Internet par satellite</strong> : Starlink, Amazon Kuiper</li>
+        <li>🤖 <strong>IA & Réseaux</strong> : optimisation dynamique de trafic, prédiction de panne</li>
+        <li>🔐 <strong>Cybersécurité des infrastructures</strong> : firewall IA, SD-WAN Zero Trust</li>
+        <li>🌍 <strong>Edge computing</strong> : traitement local ultra rapide dans les équipements réseau</li>
       </ul>
     </div>
 
     <div class="section">
-      <h3>💡 Thématiques suivies</h3>
+      <h3>🧰 Outils utilisés pour la veille</h3>
       <ul>
-        <li>🔒 Cybersécurité : vulnérabilités, ransomware, MFA, Zero Trust</li>
-        <li>🌐 Réseaux et télécoms : fibre, VPN, IPv6, SD-WAN</li>
-        <li>🖥️ Virtualisation : Hyper-V, VMware, Proxmox</li>
-        <li>📦 Logiciels libres : Linux, pfSense, Docker</li>
+        <li><a class="link" href="https://feedly.com/" target="_blank">Feedly</a> pour suivre les flux RSS spécialisés (Telecoms.com, ZDNet, Orange Innovation…)</li>
+        <li><a class="link" href="https://www.google.fr/alerts" target="_blank">Google Alerts</a> sur mots-clés : "télécom 2025", "réseau mobile", "5G entreprise", etc.</li>
+        <li>Réseaux pro : LinkedIn, X (Twitter) – hashtags #5G, #cybersecurity, #telecom</li>
       </ul>
     </div>
 
     <div class="section">
-      <h3>📌 Exemple d'article suivi</h3>
-      <p><strong>Titre :</strong> "Les nouvelles attaques basées sur l’IA : défis pour les firewalls classiques"</p>
-      <p><strong>Source :</strong> ZDNet (mars 2025)</p>
-      <p><strong>Résumé :</strong> Cet article met en lumière les limites des solutions de sécurité traditionnelles face à des attaques automatisées pilotées par IA, et propose des pistes d’évolution comme l’IA défensive et le machine learning.</p>
+      <h3>📰 Exemples d’articles suivis</h3>
+      <p><strong>Titre :</strong> "6G : déjà des tests concrets dans les laboratoires européens"</p>
+      <p><strong>Source :</strong> ZDNet, janvier 2025</p>
+      <p><strong>Résumé :</strong> La 6G promet un débit 10x supérieur à la 5G et des cas d’usage comme la téléchirurgie ou les jumeaux numériques pour la maintenance réseau.</p>
+
+      <p><strong>Titre :</strong> "Starlink Business : Internet satellite à haut débit pour zones isolées"</p>
+      <p><strong>Source :</strong> 01Net, mars 2025</p>
+      <p><strong>Résumé :</strong> Starlink propose désormais des offres professionnelles pour les PME, avec une couverture nationale, une latence &lt;50ms et une installation rapide.</p>
     </div>
   </div>
 
