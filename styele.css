@@ -1,79 +1,95 @@
-/* Style général */
+/* Base */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f2f2f2;
-    color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* En-tête */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
 header {
-    background: #1e1e1e;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #ccc;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* Section principale */
-section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+nav a:hover {
+  color: #00aaff;
 }
 
-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #1e1e1e;
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: white;
 }
 
-/* Projets */
-.project {
-    margin-bottom: 30px;
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
-.project h3 {
-    margin: 0;
-    color: #444;
-}
-
-.project p {
-    margin: 5px 0;
-    color: #666;
+.hero p {
+  font-size: 1.2em;
+  color: #666;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #1e1e1e;
-    color: white;
-    margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  margin-top: 40px;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2em;
+  }
 
-    section {
-        margin: 20px;
-        padding: 15px;
-    }
+  .hero p {
+    font-size: 1em;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
 }
