@@ -1,138 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accueil - HATIMI Bilal</title>
-  <style>
-    :root {
-      --main-color: #00bcd4;
-      --bg-dark: #0a0f24;
-      --bg-light: #121a2e;
-      --text-light: #f0f0f0;
-      --accent: #00ffe5;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to bottom, #0a0f24, #121a2e);
-      color: var(--text-light);
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: var(--bg-dark);
-      padding: 30px 0 10px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.05);
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
-      margin-bottom: 10px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      position: relative;
-      transition: color 0.3s;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: var(--accent);
-      transition: width 0.3s ease-in-out;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: url('https://images.unsplash.com/photo-1542751110-97427bbecf20') no-repeat center/cover;
-      background-blend-mode: overlay;
-      background-color: rgba(10, 15, 36, 0.8);
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 15px;
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
-    }
-
-    .hero p {
-      font-size: 1.3em;
-      color: #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: var(--bg-dark);
-      color: #aaa;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      box-shadow: 0 -4px 10px rgba(0, 255, 255, 0.05);
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2em;
-      }
-
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal HATIMI Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>HATIMI Bilal</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="profil.html">Profil</a>
-      <a href="entreprise.html">Entreprise</a>
-      <a href="epreuves.html">Épreuves</a>
-      <a href="veille.html">Veille</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <section class="hero">
-    <h1>Bienvenue sur mon portfolio</h1>
-    <p>Étudiant en BTS SIO - Option SISR</p>
-  </section>
-  <footer>
-    &copy; 2025 - HATIMI Bilal
-  </footer>
+    <header>
+        <nav>
+           <div class="logo">Bilal HATIMI</div>
+            <ul>
+              
+            
+        <li><a href="index.html"class="active">Accueil</a></li>
+          <li><a href="Profil.html">Profil</a></li>
+          <li><a href="BTS_sio.html">BTS SIO</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="veille.html">Veille Technologique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bonjour,</h1>
+            <h2>Je m'appelle <span>Bilal HATIMI</span></h2>
+            <p>Étudiant en BTS SIO option SISR</p>
+            <a href="#en-savoir-plus" class="cta-button">En savoir plus</a>
+        </div>
+    </section>
 </body>
 </html>

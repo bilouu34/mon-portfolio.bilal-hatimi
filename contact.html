@@ -1,228 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - HATIMI Bilal</title>
-  <style>
-    :root {
-      --main-color: #00bcd4;
-      --bg-dark: #0a0f24;
-      --bg-light: #121a2e;
-      --text-light: #f0f0f0;
-      --accent: #00ffe5;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to bottom, #0a0f24, #121a2e);
-      color: var(--text-light);
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: var(--bg-dark);
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.05);
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .logo-container img {
-      height: 60px;
-      width: auto;
-    }
-
-    .logo-container h1 {
-      font-size: 2em;
-      color: var(--accent);
-      text-shadow: 0 0 10px var(--accent);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      transition: color 0.3s;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: var(--accent);
-      transition: width 0.3s ease-in-out;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      box-shadow: 0 2px 15px rgba(0,255,255,0.05);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: var(--accent);
-    }
-
-    .contact-box {
-      background-color: #1b253f;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,255,255,0.1);
-    }
-
-    .contact-box p {
-      font-size: 1.1em;
-      color: #ccc;
-      margin-bottom: 10px;
-    }
-
-    .contact-box strong {
-      color: var(--accent);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #ccc;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      background-color: #1f2a47;
-      color: #fff;
-      font-size: 1em;
-    }
-
-    input::placeholder, textarea::placeholder {
-      color: #aaa;
-    }
-
-    button {
-      padding: 12px;
-      background-color: var(--accent);
-      color: #0a0f24;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #00e6d2;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .container {
-        margin: 20px;
-      }
-
-      .logo-container {
-        justify-content: center;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Bilal HATIMI</title>
+  <link rel="stylesheet" href="style3.css">
 </head>
 <body>
-
+  <!-- Header & Navigation -->
   <header>
-      <h1>HATIMI Bilal</h1>
-    </div>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="profil.html">Profil</a>
-      <a href="entreprise.html">Entreprise</a>
-      <a href="epreuves.html">Épreuves</a>
-      <a href="veille.html">Veille</a>
-      <a href="contact.html">Contact</a>
+    <nav class="menu">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Bilal HATIMI</a>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="Profil.html">Profil</a></li>
+           <li><a href="BTS_sio.html">BTS SIO</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="veille.html">Veille Technologique</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <div class="container">
-    <h2>Me Contacter</h2>
-
-    <div class="contact-box">
-      <p>📧 <strong>Email :</strong> bilal.hatimi2003@gmail.com</p>
-      <p>📱 <strong>Téléphone :</strong> 06 18 12 24 26</p>
-      <p>🗨️ N'hésitez pas à me contacter pour toute question ou projet professionnel !</p>
+  <!-- Hero Section -->
+  <section class="hero hero-contact">
+    <div class="overlay">
+      <h1>Contact</h1>
     </div>
+  </section>
 
-    <form action="#" method="post">
-      <div>
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+  <main>
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- Left column: Form -->
+        <div class="contact-info">
+          <div class="info-item">
+            <div>
+              <p><strong>Adresse Mail</strong></p>
+              <p>bilal.hatimi2003@gmail.com</p>
+            </div>
+          </div>
+          <form action="#" method="post" class="contact-form">
+            <input type="text" name="nom" placeholder="Nom *" required>
+            <input type="text" name="prenom" placeholder="Prénom *" required>
+            <input type="email" name="email" placeholder="Email *" required>
+            <textarea name="message" rows="6" placeholder="Votre message *" required></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+            <span class="required-note">* Champ Obligatoire</span>
+          </form>
+        </div>
+        <!-- Right column: Address & Map -->
+        <div class="contact-map">
+          <div class="info-item">
+            <div>
+              <p><strong>Adresse</strong></p>
+              <p>9 Avenue Saint-Lazare <br>34000 Montpellier</p>
+            </div>
       </div>
-      <div>
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" placeholder="Votre email" required />
-      </div>
-      <div>
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
-      </div>
-      <button type="submit">Envoyer</button>
-    </form>
-  </div>
+    </section>
+  </main>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container nav-container">
+      <p>Bilal HATIMI</p>
+      <p>&copy; 2025 Tous droits réservés</p>
+    </div>
+  </footer>
 </body>
 </html>
